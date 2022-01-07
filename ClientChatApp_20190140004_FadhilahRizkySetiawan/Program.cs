@@ -13,14 +13,11 @@ namespace ClientChatApp_20190140004_FadhilahRizkySetiawan
         {
             InstanceContext context = new InstanceContext(new ClientCallback());
             ServiceReference1.ServiceCallbackClient server = new ServiceReference1.ServiceCallbackClient(context);
-
             Console.WriteLine("Enter Username");
             string nama = Console.ReadLine();
             server.gabung(nama);
-
             Console.WriteLine("Kirim Pesan");
             string pesan = Console.ReadLine();
-
             while (true)
             {
                 if (!string.IsNullOrEmpty(pesan))
